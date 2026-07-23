@@ -1,5 +1,8 @@
 # openNavy — 二战海军舰队战术模拟器
 
+![Build EXE](https://github.com/TinMinL/openNavy/actions/workflows/build-exe.yml/badge.svg)
+![Build APK](https://github.com/TinMinL/openNavy/actions/workflows/build-apk.yml/badge.svg)
+
 基于六边形网格的回合制海战游戏，使用 Pygame 开发。
 
 ## 操作
@@ -45,6 +48,18 @@
 - **礁石**：仅驱逐舰可通行（消耗双倍移动力），战斗伤害 ±50%
 
 ## 构建
+
+### 自动构建（推荐）
+
+每次推送到 `master` 分支，GitHub Actions 会自动构建：
+
+1. 打开 https://github.com/TinMinL/openNavy/actions
+2. 点击最新的 **Build EXE** / **Build APK** 工作流
+3. 在底部 **Artifacts** 下载 `openNavy-exe.zip` 或 `openNavy-apk.zip`
+
+也可手动触发：进入 Actions → 选择工作流 → 点 **Run workflow**。
+
+### 本地构建
 
 ```bash
 # 安装依赖
