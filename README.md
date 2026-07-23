@@ -57,6 +57,10 @@ python main.py
 build_exe.bat
 # 或
 pyinstaller openNavy.spec
+
+# 打包 APK（需安装 buildozer，仅限 Linux）
+pip install buildozer
+buildozer android debug
 ```
 
 ## 更新日志
@@ -69,3 +73,4 @@ pyinstaller openNavy.spec
 - 地形生成（岛屿 / 浅滩 / 礁石）
 - 烟雾弹系统
 - PyInstaller 打包支持
+- Buildozer Android APK 支持

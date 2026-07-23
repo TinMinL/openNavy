@@ -574,7 +574,10 @@ def draw_menu(screen, font, font_small, font_big, mouse_pos):
 
 def main():
     pygame.init()
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    is_android = getattr(sys, 'android_ver', None) is not None
+    scaled_flag = getattr(pygame, 'SCALED', 0)
+    flags = scaled_flag if is_android else 0
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), flags)
     pygame.display.set_caption("二战海军舰队战术模拟器")
     clock = pygame.time.Clock()
     font = make_font(26)
